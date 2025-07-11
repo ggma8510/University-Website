@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading: Predictive Models for Crop Disease - Animated</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Manrope', sans-serif; background-color: #F9FAFB; color: #111827; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3 { font-weight: 800; }
+        .prose-custom { font-size: 1.125rem; line-height: 1.8; }
+        .prose-custom p { margin-bottom: 1.5em; }
+        .prose-custom h2 { font-size: 2.25rem; margin-top: 2.5em; margin-bottom: 1em; letter-spacing: -0.025em; }
+        .prose-custom h3 { font-size: 1.5rem; margin-top: 2em; margin-bottom: 1em; letter-spacing: -0.025em; }
+        .animate-on-load { opacity: 0; transform: translateY(15px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+        .loaded .animate-on-load { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="w-full">
+
+    <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <a href="research.html" class="inline-flex items-center gap-2 text-gray-500 font-bold hover:text-black mb-16 animate-on-load">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
+            Back to All Research
+        </a>
+        <article class="prose-custom">
+            <header class="border-b border-gray-200 pb-8 mb-12 animate-on-load" style="transition-delay: 150ms;">
+                <p class="font-bold text-blue-600">AI IN AGRICULTURE</p>
+                <h1 class="text-4xl md:text-6xl mt-2 tracking-tighter leading-tight">Predictive Models for Crop Disease Using Convolutional Neural Networks</h1>
+                <div class="mt-8 text-lg">
+                    <p class="font-bold">Authors: <span class="font-normal text-gray-700">Anika Rahman, Dr. David Chen</span></p>
+                    <p class="font-bold">Published: <span class="font-normal text-gray-700">October 15, 2023</span></p>
+                </div>
+            </header>
+            <div class="mt-12 animate-on-load" style="transition-delay: 300ms;">
+                <h2>Abstract</h2>
+                <p>This paper presents a novel approach to agricultural automation by developing a highly accurate, accessible deep learning model for the early detection of common crop diseases. Utilizing Convolutional Neural Networks (CNNs), our model analyzes digital images of plant leaves to identify signs of disease with an accuracy rate of 98.2%, significantly outperforming existing benchmarks.</p>
+                <h2>1. Introduction</h2>
+                <p>Global food security remains one of the 21st century's most pressing challenges. A significant threat to crop yield is the prevalence of plant diseases. This study investigates the potential of CNNs to provide an immediate, reliable diagnostic tool for farmers worldwide.</p>
+                <div class="grid md:grid-cols-2 gap-x-12 items-center my-16">
+                    <div><img src="https://images.unsplash.com/photo-1627923764483-36659a264a20?q=80&w=2535&auto=format&fit=crop" alt="Diseased Leaf sample" class="gallery-image rounded-lg cursor-pointer w-full shadow-md"></div>
+                    <div class="mt-8 md:mt-0">
+                        <h3>2.1. Dataset and Pre-processing</h3>
+                        <p>Our model was trained on a comprehensive dataset of over 54,000 images from the PlantVillage repository. We applied a series of augmentation techniques like random rotations and flips to prevent overfitting.</p>
+                    </div>
+                </div>
+                <h3>2.2. Model Architecture</h3>
+                <p>We designed a custom CNN architecture inspired by VGG16 but optimized for mobile deployment, consisting of eight convolutional layers followed by three fully-connected layers.</p>
+                <h2>3. Results & Discussion</h2>
+                <p>The trained model achieved a top-1 accuracy of 98.2% and an F1-score of 0.97 on a held-out test set. Our results strongly suggest that deep learning models can serve as a powerful and reliable tool for farmers.</p>
+            </div>
+        </article>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50 hidden"><div class="relative"><button id="lightbox-close" class="absolute -top-4 -right-4 w-10 h-10 bg-white text-black rounded-full text-2xl font-bold">&times;</button><img id="lightbox-image" src="" alt="Enlarged view" class="max-w-full max-h-[90vh] rounded-lg"></div></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('loaded');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(image => {
+        image.addEventListener('click', () => {
+            lightboxImage.src = image.src;
+            lightbox.classList.remove('hidden');
+        });
+    });
+    const closeLightbox = () => lightbox.classList.add('hidden');
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+});
+</script>
+
+</body>
+</html>

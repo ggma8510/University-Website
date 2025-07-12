@@ -3,63 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Homepage - Animated Concept</title>
-    
+    <title>Institute Of Paradoxical Strategic Thought</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-    
+
     <style>
         body { 
             font-family: 'Manrope', sans-serif;
-            background-color: #F9FAFB;
-            color: #111827;
+            background-color: #F8F8F8;
+            color: #1D1D1F;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background-image: radial-gradient(#dce1e7 0.5px, transparent 0.5px);
-            background-size: 24px 24px;
+            background-image: radial-gradient(#EAEAEA 1px, transparent 1px);
+            background-size: 32px 32px;
         }
-        
-        .text-accent {
-            color: #0047AB; /* A deep, sophisticated blue */
+        .text-accent { color: #0A2540; }
+        .animate-on-load { 
+            opacity: 0; 
+            transform: translateY(1rem);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
-        /* Animation Styles */
-        /* Initial state: hidden and slightly moved down */
-        .animate-on-load {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        /* Final state: visible and in original position */
-        .loaded .animate-on-load {
-            opacity: 1;
-            transform: translateY(0);
+        .loaded .animate-on-load { opacity: 1; transform: translateY(0); }
+        .nav-link {
+            transition: color 0.3s ease;
         }
     </style>
 </head>
 <body class="w-full min-h-screen">
 
-    <div class="min-h-screen w-full flex items-center justify-center p-4">
-        <div class="w-full max-w-6xl">
+    <div class="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <div class="w-full max-w-7xl">
             <div class="p-8 md:p-12">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
-                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
+
                     <!-- Left Column -->
                     <div class="md:col-span-4 flex flex-col justify-between">
-                        <!-- Add animate-on-load class for animation -->
                         <div class="animate-on-load" style="transition-delay: 200ms;">
-                            <p class="font-bold text-lg text-gray-900">Global University of Innovation</p>
-                            <p class="text-base text-gray-500">Dhaka, BD</p>
+                            <p class="font-bold text-lg text-gray-900">Institute Of Paradoxical Strategic Thought</p>
                         </div>
-                        <div class="mt-8 md:mt-0 animate-on-load" style="transition-delay: 400ms;">
+                        <div class="mt-12 md:mt-0 animate-on-load" style="transition-delay: 400ms;">
                             <a href="about.html" class="inline-flex items-center gap-2 text-gray-800 font-bold group">
-                                Discover More
-                                <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+                                <span>Discover Our Method</span>
+                                <span class="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
                             </a>
                         </div>
                     </div>
@@ -67,12 +55,11 @@
                     <!-- Right Column -->
                     <div class="md:col-span-8 flex items-center">
                         <header>
-                             <!-- Add animate-on-load class for animation -->
-                            <h1 class="text-5xl lg:text-7xl font-extrabold text-gray-900 tracking-tighter leading-tight animate-on-load" style="transition-delay: 600ms;">
-                                Shaping the future of knowledge through <span class="text-accent">radical curiosity.</span>
+                            <h1 class="text-5xl md:text-6xl lg:text-8xl font-extrabold text-gray-900 tracking-tighter leading-tight animate-on-load" style="transition-delay: 600ms;">
+                                A university designed from real-life failures, for <span class="text-accent">real-life success.</span>
                             </h1>
-                            <p class="mt-6 text-xl text-gray-600 leading-relaxed animate-on-load" style="transition-delay: 800ms;">
-                                We are a new-age institution built on the belief that true innovation stems not from structured curricula, but from the relentless pursuit of questions. Here, students don't just learn—they unlearn, discover, and build the future they envision.
+                            <p class="mt-8 text-xl text-gray-600 leading-relaxed animate-on-load" style="transition-delay: 800ms;">
+                                We don't give you a map. We give you a compass and the courage to navigate your own path. Because the goal isn't to get a degree, it's to build a destiny.
                             </p>
                         </header>
                     </div>
@@ -80,17 +67,17 @@
                 </div>
 
                 <!-- Footer Navigation -->
-                <footer class="mt-20 md:mt-24 pt-8 border-t border-gray-200 animate-on-load" style="transition-delay: 1000ms;">
-                    <div class="flex justify-center items-center flex-wrap gap-x-6 gap-y-2">
-                        <a href="#" class="text-gray-900 font-bold transform hover:scale-105 transition-transform">Home</a>
-                        <span class="text-gray-300">•</span>
-                        <a href="philosophy.html" class="text-gray-500 font-medium hover:text-gray-900 transform hover:scale-105 transition-all">Philosophy</a>
-                        <span class="text-gray-300">•</span>
-                        <a href="about.html" class="text-gray-500 font-medium hover:text-gray-900 transform hover:scale-105 transition-all">About</a>
-                        <span class="text-gray-300">•</span>
-                        <a href="research.html" class="text-gray-500 font-medium hover:text-gray-900 transform hover:scale-105 transition-all">Research</a>
-                        <span class="text-gray-300">•</span>
-                        <a href="faculties.html" class="text-gray-500 font-medium hover:text-gray-900 transform hover:scale-105 transition-all">Faculties</a>
+                <footer class="mt-24 md:mt-32 pt-10 border-t border-gray-200 animate-on-load" style="transition-delay: 1000ms;">
+                    <div class="flex justify-center items-center flex-wrap gap-x-8 gap-y-2">
+                        <a href="index.html" class="text-gray-900 font-bold nav-link">Home</a>
+                        <span class="text-gray-300 select-none">•</span>
+                        <a href="philosophy.html" class="text-gray-500 font-medium hover:text-gray-900 nav-link">Philosophy</a>
+                        <span class="text-gray-300 select-none">•</span>
+                        <a href="about.html" class="text-gray-500 font-medium hover:text-gray-900 nav-link">About</a>
+                        <span class="text-gray-300 select-none">•</span>
+                        <a href="research.html" class="text-gray-500 font-medium hover:text-gray-900 nav-link">Research</a>
+                        <span class="text-gray-300 select-none">•</span>
+                        <a href="faculties.html" class="text-gray-500 font-medium hover:text-gray-900 nav-link">Faculties</a>
                     </div>
                 </footer>
             </div>
@@ -98,8 +85,6 @@
     </div>
 
 <script>
-    // This simple script adds the 'loaded' class to the body after the page loads,
-    // which triggers our CSS animations.
     document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('loaded');
     });

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reading: Predictive Models for Crop Disease - Animated</title>
+    <title>Case Study: The Car Builder</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,74 +11,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Manrope', sans-serif; background-color: #F9FAFB; color: #111827; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3 { font-weight: 800; }
-        .prose-custom { font-size: 1.125rem; line-height: 1.8; }
-        .prose-custom p { margin-bottom: 1.5em; }
-        .prose-custom h2 { font-size: 2.25rem; margin-top: 2.5em; margin-bottom: 1em; letter-spacing: -0.025em; }
-        .prose-custom h3 { font-size: 1.5rem; margin-top: 2em; margin-bottom: 1em; letter-spacing: -0.025em; }
-        .animate-on-load { opacity: 0; transform: translateY(15px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
-        .loaded .animate-on-load { opacity: 1; transform: translateY(0); }
+        body { 
+            font-family: 'Manrope', sans-serif; 
+            background-color: #F8F8F8;
+            color: #1D1D1F; 
+            -webkit-font-smoothing: antialiased;
+            background-image: radial-gradient(#EAEAEA 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .text-accent { color: #0A2540; }
+        
+        .prose-custom { font-size: 1.125rem; line-height: 1.8; max-width: 45rem; }
+        .prose-custom p { margin-bottom: 1.5em; color: #333; }
+        .prose-custom h1 { font-size: 3.5rem; font-weight: 800; tracking-tighter; color: #1D1D1F; }
+        .prose-custom h2 { font-size: 1.75rem; margin-top: 2.5em; margin-bottom: 1em; font-weight: 700; padding-bottom: 0.5rem; border-bottom: 1px solid #EAEAEA; }
+        .prose-custom h3 { font-size: 1.25rem; margin-top: 2em; margin-bottom: 1em; font-weight: 700; }
+        .prose-custom ul, .prose-custom ol { padding-left: 1.5rem; margin-bottom: 1.5em; }
+        .prose-custom li { margin-bottom: 0.5em; }
+        .prose-custom strong { font-weight: 700; color: #1D1D1F; }
+        .back-link { transition: color 0.3s ease; }
     </style>
 </head>
 <body class="w-full">
-
-    <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <a href="research.html" class="inline-flex items-center gap-2 text-gray-500 font-bold hover:text-black mb-16 animate-on-load">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
+    <div class="mx-auto px-6 py-24 sm:px-8 lg:px-12">
+        
+        <a href="research.html" class="back-link inline-flex items-center gap-2 text-gray-500 font-medium hover:text-gray-900 mb-16">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
             Back to All Research
         </a>
-        <article class="prose-custom">
-            <header class="border-b border-gray-200 pb-8 mb-12 animate-on-load" style="transition-delay: 150ms;">
-                <p class="font-bold text-blue-600">AI IN AGRICULTURE</p>
-                <h1 class="text-4xl md:text-6xl mt-2 tracking-tighter leading-tight">Predictive Models for Crop Disease Using Convolutional Neural Networks</h1>
-                <div class="mt-8 text-lg">
-                    <p class="font-bold">Authors: <span class="font-normal text-gray-700">Anika Rahman, Dr. David Chen</span></p>
-                    <p class="font-bold">Published: <span class="font-normal text-gray-700">October 15, 2023</span></p>
+
+        <article class="prose-custom mx-auto">
+            <header class="border-b border-gray-200 pb-10">
+                <p class="font-bold text-accent tracking-widest text-sm uppercase">Case Study: The Car Builder</p>
+                <h1 class="mt-4">How to Build a Car Without a Degree</h1>
+                <div class="mt-8 text-lg flex gap-8">
+                    <p><span class="font-bold">Author:</span> Student "Alex"</p>
+                    <p><span class="font-bold">Timeline:</span> 24 Months</p>
                 </div>
             </header>
-            <div class="mt-12 animate-on-load" style="transition-delay: 300ms;">
-                <h2>Abstract</h2>
-                <p>This paper presents a novel approach to agricultural automation by developing a highly accurate, accessible deep learning model for the early detection of common crop diseases. Utilizing Convolutional Neural Networks (CNNs), our model analyzes digital images of plant leaves to identify signs of disease with an accuracy rate of 98.2%, significantly outperforming existing benchmarks.</p>
-                <h2>1. Introduction</h2>
-                <p>Global food security remains one of the 21st century's most pressing challenges. A significant threat to crop yield is the prevalence of plant diseases. This study investigates the potential of CNNs to provide an immediate, reliable diagnostic tool for farmers worldwide.</p>
-                <div class="grid md:grid-cols-2 gap-x-12 items-center my-16">
-                    <div><img src="https://images.unsplash.com/photo-1627923764483-36659a264a20?q=80&w=2535&auto=format&fit=crop" alt="Diseased Leaf sample" class="gallery-image rounded-lg cursor-pointer w-full shadow-md"></div>
-                    <div class="mt-8 md:mt-0">
-                        <h3>2.1. Dataset and Pre-processing</h3>
-                        <p>Our model was trained on a comprehensive dataset of over 54,000 images from the PlantVillage repository. We applied a series of augmentation techniques like random rotations and flips to prevent overfitting.</p>
+
+            <div class="mt-12">
+                <h2>The Mission</h2>
+                <p>To design and build a functional, single-seater electric car from scratch with a budget of less than $10,000, proving that passion and focused execution can outperform a traditional 4-year engineering degree.</p>
+
+                <h2>The "Anti-Curriculum": A Practical Roadmap</h2>
+                <p>Instead of a fixed syllabus, Alex's education was a fluid roadmap based on the immediate problems he needed to solve. His learning was divided into three key blocks:</p>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center my-16">
+                    <div class="order-2 md:order-1">
+                        <h3>Core Technicals (CT): Just-in-Time Learning</h3>
+                        <p>Alex learned skills only when he needed them. This wasn't about passing exams; it was about making progress.</p>
+                        <ul class="list-disc">
+                            <li><strong>Welding (Weeks 1-4):</strong> He didn't read a textbook. He bought a cheap welder and spent 100 hours joining scrap metal until his welds were strong.</li>
+                            <li><strong>Electronics (Weeks 5-8):</strong> He learned basic circuit theory by wiring a simple motor to a battery, burning out several components in the process. Each failure was a lesson.</li>
+                            <li><strong>3D Modeling (Weeks 9-16):</strong> He learned just enough CAD to design a functional chassis, ignoring all advanced features of the software.</li>
+                        </ul>
+                    </div>
+                    <div class="order-1 md:order-2">
+                         <img src="https://images.unsplash.com/photo-1605559424843-9e4422899646?q=80&w=2670&auto=format&fit=crop" alt="A car chassis being built" class="rounded-xl shadow-lg w-full">
                     </div>
                 </div>
-                <h3>2.2. Model Architecture</h3>
-                <p>We designed a custom CNN architecture inspired by VGG16 but optimized for mobile deployment, consisting of eight convolutional layers followed by three fully-connected layers.</p>
-                <h2>3. Results & Discussion</h2>
-                <p>The trained model achieved a top-1 accuracy of 98.2% and an F1-score of 0.97 on a held-out test set. Our results strongly suggest that deep learning models can serve as a powerful and reliable tool for farmers.</p>
+
+                <h3>Execution Practice (EP): Build, Break, Repeat</h3>
+                <p>This was the core of his education. The plan was simple: build a series of increasingly complex prototypes.</p>
+                <ol>
+                    <li><strong>Prototype 1 (The "Ugly Kart"):</strong> A bare-bones go-kart frame with a small motor. The goal was simple: make it move. It took 3 months and countless failures.</li>
+                    <li><strong>Prototype 2 (The "Rolling Chassis"):</strong> A more robust frame with functional steering and suspension. This phase was about control and stability.</li>
+                    <li><strong>Prototype 3 (The Final Vehicle):</strong> The full-scale car with a custom-designed body. This final stage integrated all previously learned skills.</li>
+                </ol>
+
+                <h2>Mind Architecture (MA): The Internal Game</h2>
+                <p>The biggest challenge was not technical; it was mental. Alex had to learn to manage the crushing frustration of a failed weld or a fried circuit. He kept a "failure log" to document every mistake, turning setbacks into data points. This practice built extreme resilience and a detached, problem-solving mindset.</p>
+
+                <h2>Conclusion: The Outcome</h2>
+                <p>In 24 months, Alex had a functional electric car. He didn't have a degree, but he had something far more valuable: proven, real-world capability. He had learned more about engineering, problem-solving, and resilience by building one car than most students learn in four years of theoretical study.</p>
             </div>
         </article>
     </div>
-
-    <!-- Image Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50 hidden"><div class="relative"><button id="lightbox-close" class="absolute -top-4 -right-4 w-10 h-10 bg-white text-black rounded-full text-2xl font-bold">&times;</button><img id="lightbox-image" src="" alt="Enlarged view" class="max-w-full max-h-[90vh] rounded-lg"></div></div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('loaded');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxClose = document.getElementById('lightbox-close');
-    const galleryImages = document.querySelectorAll('.gallery-image');
-
-    galleryImages.forEach(image => {
-        image.addEventListener('click', () => {
-            lightboxImage.src = image.src;
-            lightbox.classList.remove('hidden');
-        });
-    });
-    const closeLightbox = () => lightbox.classList.add('hidden');
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-});
-</script>
-
 </body>
 </html>

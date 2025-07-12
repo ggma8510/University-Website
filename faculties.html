@@ -3,73 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Model - Animated Concept</title>
-    
+    <title>Our Faculty Model - Institute Of Paradoxical Strategic Thought</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-    
+
     <style>
-        body { font-family: 'Manrope', sans-serif; background-color: #F9FAFB; color: #111827; -webkit-font-smoothing: antialiased; background-image: radial-gradient(#dce1e7 0.5px, transparent 0.5px); background-size: 24px 24px; }
-        .prose-custom { font-size: 1.125rem; line-height: 1.75; }
-        .prose-custom p, .prose-custom ul { margin-bottom: 1.5em; }
-        .prose-custom h2 { font-size: 1.875rem; margin-bottom: 1em; font-weight: 700; }
-        .prose-custom h3 { font-size: 1.5rem; margin-top: 1.5em; margin-bottom: 0.75em; font-weight: 700; }
-        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #F9FAFB; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #d1d5db; border-radius: 10px; }
-        .animate-on-load { opacity: 0; transform: translateY(20px); transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        body { font-family: 'Manrope', sans-serif; background-color: #F8F8F8; color: #1D1D1F; -webkit-font-smoothing: antialiased; background-image: radial-gradient(#EAEAEA 1px, transparent 1px); background-size: 32px 32px; }
+        .text-accent { color: #0A2540; }
+        
+        .prose-custom { font-size: 1.125rem; line-height: 1.8; }
+        .prose-custom p, .prose-custom ul, .prose-custom blockquote { margin-bottom: 1.5em; color: #333; }
+        .prose-custom h2 { font-size: 1.75rem; margin-top: 2.5em; margin-bottom: 1em; font-weight: 700; padding-bottom: 0.5rem; border-bottom: 1px solid #EAEAEA; }
+        .prose-custom h3 { font-size: 1.25rem; margin-top: 2em; margin-bottom: 1em; font-weight: 700; color: #1D1D1F; }
+        .prose-custom blockquote { border-left: 3px solid #0A2540; color: #4A4A4A; padding-left: 1.5rem; font-style: normal; }
+        
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #d1d5db; border-radius: 6px; }
+        
+        .animate-on-load { opacity: 0; transform: translateY(1rem); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .loaded .animate-on-load { opacity: 1; transform: translateY(0); }
+        .nav-link { transition: color 0.3s ease; }
     </style>
 </head>
 <body class="w-full min-h-screen">
 
-    <div class="min-h-screen w-full flex items-center justify-center p-4">
-        <div class="w-full max-w-6xl">
+    <div class="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <div class="w-full max-w-7xl">
             <div class="p-8 md:p-12">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
+                    <!-- Left Column -->
                     <div class="md:col-span-4 flex flex-col justify-between animate-on-load" style="transition-delay: 200ms;">
                         <div>
-                            <p class="font-bold text-lg text-gray-900">Global University of Innovation</p>
-                            <p class="text-base text-gray-500">Dhaka, BD</p>
-                            <div class="mt-12">
-                                <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tighter leading-tight">Education Reimagined.</h1>
-                                <p class="mt-4 text-lg text-gray-600">We've moved beyond traditional departments to a fluid, goal-oriented model of mentorship. Your ambition defines your faculty.</p>
+                            <p class="font-bold text-lg text-gray-900">Institute Of Paradoxical Strategic Thought</p>
+                            <div class="mt-16">
+                                <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tighter">Your Mission Defines Your Mentors.</h1>
+                                <p class="mt-6 text-lg font-medium text-gray-700 leading-relaxed">
+                                    We have no departments and no permanent teachers. Here, you assemble a world-class team of guides tailored to your specific goal.
+                                </p>
                             </div>
                         </div>
-                        <div class="mt-8 md:mt-0"><p class="text-gray-900 font-bold">The Faculty Model</p></div>
+                        <div class="mt-12 md:mt-0"><p class="text-gray-900 font-bold">The Faculty Model</p></div>
                     </div>
+
+                    <!-- Right Column -->
                     <div class="md:col-span-8 animate-on-load" style="transition-delay: 400ms;">
-                         <div class="max-h-[60vh] overflow-y-auto custom-scrollbar pr-6">
+                        <div class="max-h-[65vh] overflow-y-auto custom-scrollbar pr-6">
                             <article class="prose-custom">
-                                <h2>Why We Abolished Departments</h2>
-                                <p>The world's greatest challenges are not confined to a single discipline. Traditional departments create silos that inhibit the cross-pollination of ideas required to solve complex problems.</p>
-                                <p>Our "Goal-Oriented Faculty" model dismantles these walls. We bring in experts in specific fields who can mentor students across various ambitious goals.</p>
-                                <h3>How It Works: Crafting Your Personal Faculty</h3>
-                                <p>You don't declare a major; you define a mission. Based on your mission, you assemble a personal faculty panel. This team becomes your dedicated faculty, guiding your unique curriculum.</p>
-                                <hr class="my-8 border-gray-200">
-                                <h3>An Exception: The Foundation of Context</h3>
-                                <p>While our model champions fluid learning, we recognize that all innovative thought is built upon a deep understanding of human context. To provide this foundational bedrock, we maintain one formal faculty:</p>
-                                <div class="bg-gray-100 p-6 rounded-lg border border-gray-200">
-                                    <p class="text-2xl font-bold text-blue-600">Faculty of History & Strategic Studies</p>
-                                    <p class="mt-2 text-gray-700">This faculty serves all students, providing the essential historical and strategic perspectives necessary to ensure their innovations are responsible and wise.</p>
+                                <h2>Guides, Not Lecturers</h2>
+                                <p>A traditional teacher gives you answers to memorize. A guide from our Mentor Collective helps you ask better questions and find your own answers. They are not here to lecture; they are here to challenge, direct, and hold you accountable.</p>
+                                <blockquote>Our mentors are industry veterans, seasoned entrepreneurs, and master craftspeople—not just academics. Their wisdom is practical because they have built real things and failed in the real world.</blockquote>
+                                
+                                <h2>How You Build Your Personal Faculty: A Case Study</h2>
+                                <p>The concept of "faculty" here is fluid. It is a team you build. Let's look at an example of a student deeply interested in history and strategy.</p>
+                                
+                                <div class="mt-10 border-t border-gray-200 pt-10">
+                                    <h3 class="font-bold text-accent">Student Mission:</h3>
+                                    <p class="text-xl font-semibold text-gray-900 mt-2">To become a strategic advisor who uses historical patterns to predict modern geopolitical shifts.</p>
+                                    
+                                    <p class="mt-6">This student didn't enroll in a "History Department." Instead, they crafted a personal faculty panel to help them achieve their unique goal. Their panel for the first year included:</p>
+                                    
+                                    <ul class="list-none mt-6 space-y-4">
+                                        <li>
+                                            <span class="font-bold text-gray-900">A Military Historian:</span><br> To understand the principles of ancient warfare and strategy (e.g., studying Sun Tzu and Clausewitz).
+                                        </li>
+                                        <li>
+                                            <span class="font-bold text-gray-900">A Data Scientist:</span><br> To learn how to analyze historical data to find hidden patterns and trends.
+                                        </li>
+                                        <li>
+                                            <span class="font-bold text-gray-900">A Political Journalist:</span><br> To learn how to synthesize complex information into clear, actionable intelligence reports.
+                                        </li>
+                                    </ul>
+                                    <p class="mt-6">This unique combination of mentors is what we call their <span class="text-accent font-bold">"Faculty of History & Strategic Studies."</span> It is a faculty of one, built for one mission. Another student with a different goal would have a completely different faculty.
+                                    </p>
                                 </div>
+                                <p class="mt-8">
+                                    This is the core of our model. Your faculty is not a place you go to; it is a world-class team you build around your ambition.
+                                </p>
                             </article>
                         </div>
                     </div>
                 </div>
-                <footer class="mt-20 md:mt-24 pt-8 border-t border-gray-200 animate-on-load" style="transition-delay: 600ms;">
-                    <div class="flex justify-center items-center flex-wrap gap-x-6 gap-y-2">
-                        <a href="index.html" class="text-gray-500 font-medium hover:text-gray-900 transition-colors">Home</a>
-                        <span class="text-gray-300">•</span>
-                        <a href="philosophy.html" class="text-gray-500 font-medium hover:text-gray-900 transition-colors">Philosophy</a>
-                        <span class="text-gray-300">•</span>
-                        <a href="about.html" class="text-gray-500 font-medium hover:text-gray-900 transition-colors">About</a>
-                        <span class="text-gray-300">•</span>
-                        <a href="research.html" class="text-gray-500 font-medium hover:text-gray-900 transition-colors">Research</a>
-                        <span class="text-gray-300">•</span>
-                        <a href="#" class="text-gray-900 font-bold">Faculties</a>
+                <footer class="mt-24 md:mt-32 pt-10 border-t border-gray-200 animate-on-load" style="transition-delay: 600ms;">
+                    <div class="flex justify-center items-center flex-wrap gap-x-8 gap-y-2">
+                        <a href="index.html" class="text-gray-500 font-medium hover:text-gray-900 nav-link">Home</a>
+                        <span class="text-gray-300 select-none">•</span>
+                        <a href="philosophy.html" class="text-gray-500 font-medium hover:text-gray-900 nav-link">Philosophy</a>
+                        <span class="text-gray-300 select-none">•</span>
+                        <a href="about.html" class="text-gray-500 font-medium hover:text-gray-900 nav-link">About</a>
+                        <span class="text-gray-300 select-none">•</span>
+                        <a href="research.html" class="text-gray-500 font-medium hover:text-gray-900 nav-link">Research</a>
+                        <span class="text-gray-300 select-none">•</span>
+                        <a href="faculties.html" class="text-gray-900 font-bold nav-link">Faculties</a>
                     </div>
                 </footer>
             </div>

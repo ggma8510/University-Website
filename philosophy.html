@@ -41,9 +41,10 @@
         .loaded .animate-on-load { opacity: 1; transform: translateY(0); }
         .nav-link { transition: color 0.3s ease; }
         .tooltip-container { position: relative; display: inline-block; }
-        .tooltip-content { visibility: hidden; opacity: 0; width: 320px; background-color: #fffff4; color: #fff; text-align: left; border-radius: 8px; padding: 16px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -160px; transition: opacity 0.3s, visibility 0.3s; font-size: 0.875rem; line-height: 1.6; font-weight: 400; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .tooltip-content { visibility: hidden; opacity: 0; width: 320px; background-color: #ffffff; color: #1D1D1F; text-align: left; border-radius: 8px; padding: 16px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -160px; transition: opacity 0.3s, visibility 0.3s; font-size: 0.875rem; line-height: 1.6; font-weight: 400; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border: 1px solid #eaeaea; }
         .tooltip-container:hover .tooltip-content { visibility: visible; opacity: 1; }
-        .tooltip-content::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #0A2540 transparent transparent transparent; }
+        .tooltip-content::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #ffffff transparent transparent transparent; }
+        .tooltip-content strong { color: #0A2540; }
     </style>
 </head>
 <body class="w-full min-h-screen">
@@ -102,39 +103,9 @@ This is one of those."
                                             <div class="tooltip-container mt-2 sm:mt-0">
                                                 <button class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">Explore This Thought</button>
                                                 <div class="tooltip-content">
-                                                    <strong>The Core Idea:</strong> <h1>It’s All Internal</h1>
-
-    <p>Life is not really about what happens to you.<br>
-    It’s about <span class="highlight">how you respond</span> to what happens.</p>
-
-    <p>Your mind decides:</p>
-
-    <ul>
-        <li>Is this a <span class="highlight">problem</span>?</li>
-        <li>Or is this a <span class="highlight">challenge</span>?</li>
-        <li>Is this a <span class="highlight">failure</span>?</li>
-        <li>Or is this a <span class="highlight">lesson</span>?</li>
-    </ul>
-
-    <p>Same event, different people—different reactions.<br>
-    Because people don’t experience life.<br>
-    They experience their own <strong>interpretation of life</strong>.</p>
-
-    <p>That’s why—<br>
-    <strong>Your mindset is more important than your situation.</strong></p>
-
-    <p>Control your internal world:</p>
-
-    <ul>
-        <li>Your <span class="highlight">thoughts</span></li>
-        <li>Your <span class="highlight">focus</span></li>
-        <li>Your <span class="highlight">meaning-making</span></li>
-    </ul>
-
-    <p>Then the outside world will automatically feel different.</p>
-
-    <p>This is not <span class="highlight">positive thinking</span>.<br>
-    This is <strong>real strategy</strong> for mental strength.</p>        </div>
+                                                    <p><strong>The Core Idea:</strong> Your mindset is more important than your situation. Life is not about what happens to you, but about how you <strong>interpret and respond</strong> to what happens.</p>
+                                                    <p class="mt-2">An event is neutral. Your mind decides if it's a "problem" or a "challenge," a "failure" or a "lesson." By controlling your internal world—your thoughts, focus, and the meaning you create—you gain control over your external reality. This isn't blind positive thinking; it's a strategic approach to mental strength.</p>
+                                                </div>
                                             </div>
                                         </div>
                                         <p class="text-base">The reason you are not reaching your goals is not because you lack money or resources. It’s because of what’s happening inside your head. Your self-doubt, your laziness, your excuses. We believe the first step is to win this internal war.</p>
@@ -147,13 +118,14 @@ This is one of those."
                                             <div class="tooltip-container mt-2 sm:mt-0">
                                                 <button class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">Explore This Thought</button>
                                                 <div class="tooltip-content">
-                                                    <strong>The Core Idea:</strong> This is about the power of a transcendent goal. A goal must be so large and inspiring that it simplifies your life by making all other choices easy. If your mission is to get to Mars, you don't debate whether to watch another hour of TV. The goal's gravity pulls you forward, forcing you to acquire necessary skills and shed unnecessary baggage. It provides its own motivation.
+                                                    <p><strong>The Core Idea:</strong> A goal must be so large and inspiring that it simplifies your life by making all other choices easy. It acts as a powerful filter for your decisions.</p>
+                                                    <p class="mt-2">If your mission is to get to Mars, you don't waste time debating whether to watch another hour of TV. The question "Does this help me get to Mars?" has a clear answer. The goal's gravity pulls you forward, forcing you to acquire necessary skills and shed unnecessary baggage. <strong>The goal provides its own motivation.</strong></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <p class="text-base">If your goal is to go to Mars, you will automatically figure out how to build a rocket. You won't waste time on unimportant things. We suggest setting a goal so big and exciting that it naturally forces you to learn everything you need to get there.</p>
                                     </li>
-                                    
+
                                     <!-- Thought 3 -->
                                     <li class="space-y-3">
                                          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
@@ -161,7 +133,8 @@ This is one of those."
                                             <div class="tooltip-container mt-2 sm:mt-0">
                                                  <button class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">Explore This Thought</button>
                                                  <div class="tooltip-content">
-                                                     <strong>The Core Idea:</strong> A wandering mind is not a sign of weakness, but a sign of a weak mission. Focus is not something you force; it is something that emerges when a goal is sufficiently compelling. If you are truly passionate about your goal, focus is the natural result. The work isn't to "try harder to focus," but to "build a better goal."
+                                                     <p><strong>The Core Idea:</strong> Focus is not something you force; it is something that emerges when a goal is sufficiently compelling. A wandering mind is not a sign of weakness, but a sign of a weak mission.</p>
+                                                     <p class="mt-2">If you find yourself easily distracted, the problem isn't your lack of willpower. The problem is that your goal isn't exciting enough to hold your attention. The solution isn't to "try harder to focus," but to <strong>"build a better, more inspiring goal."</strong> When the 'why' is powerful enough, the 'how' becomes clear and focus is the natural result.</p>
                                                  </div>
                                             </div>
                                         </div>
@@ -175,7 +148,8 @@ This is one of those."
                                             <div class="tooltip-container mt-2 sm:mt-0">
                                                  <button class="bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">Explore This Thought</button>
                                                  <div class="tooltip-content">
-                                                     <strong>The Core Idea:</strong> Knowledge is potential power, not actual power. Its only value lies in its application. A library of unread books makes no one wise. True learning is a feedback loop: you learn an idea, you apply it, you observe the outcome, you refine your understanding. Without action, knowledge is just trivia.
+                                                     <p><strong>The Core Idea:</strong> Knowledge is potential power, not actual power. Its only value lies in its application. A library of unread books makes no one wise.</p>
+                                                     <p class="mt-2">True learning is an active feedback loop: you learn a concept, you apply it in the real world, you observe the outcome, and you refine your understanding based on that feedback. Hoarding information without using it is a form of intellectual procrastination. <strong>Without action, knowledge is just trivia.</strong></p>
                                                  </div>
                                             </div>
                                         </div>
